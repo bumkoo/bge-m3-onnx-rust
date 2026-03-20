@@ -1,0 +1,18 @@
+/target
+*.exe
+*.pdb
+
+# ONNX 모델 (570MB, git에 올리지 않음)
+model/
+*.onnx
+*.onnx_data
+
+# 파이썬 임시 파일
+__pycache__/
+*.py
+!export_onnx.py
+
+# IDE
+.idea/
+.vscode/
+*.swp

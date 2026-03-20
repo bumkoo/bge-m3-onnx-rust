@@ -1,0 +1,14 @@
+[package]
+name = "bge-m3-onnx-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# ort의 load-dynamic 기능을 활성화하여 링킹 타임의 충돌을 방지하고 런타임에 DLL을 로드하도록 합니다.
+ort = { version = "2.0.0-rc.12", features = ["ndarray"] }
+tokenizers = "0.21.0"
+ndarray = "0.16.1"
+anyhow = "1.0.95"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+tokio = { version = "1.43.0", features = ["full"] }
