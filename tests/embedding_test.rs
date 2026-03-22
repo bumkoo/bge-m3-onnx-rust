@@ -11,7 +11,7 @@ use std::sync::Once;
 static INIT: Once = Once::new();
 
 fn init_ort() {
-    INIT.call_once(|| { ort::init().commit(); });
+    INIT.call_once(|| { bge_m3_onnx_rust::init_ort(); });
 }
 
 fn create_embedder() -> BgeM3Embedder {

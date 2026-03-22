@@ -7,7 +7,7 @@ use bge_m3_onnx_rust::{
 };
 
 fn main() -> Result<()> {
-    ort::init().commit();
+    bge_m3_onnx_rust::init_ort();
 
     let model_path = "../models/bge-m3/model_quantized.onnx";
     let tokenizer_path = "../models/bge-m3/tokenizer.json";

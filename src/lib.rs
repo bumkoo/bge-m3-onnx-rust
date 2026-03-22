@@ -20,6 +20,11 @@ pub struct BgeM3Output {
     pub colbert: Vec<Vec<f32>>,    // [seq_len][1024] ColBERT 벡터들
 }
 
+/// ONNX Runtime 초기화 — 프로세스당 한 번 호출
+pub fn init_ort() {
+    ort::init().commit();
+}
+
 /// BGE-M3 ONNX 임베더
 pub struct BgeM3Embedder {
     tokenizer: Tokenizer,
